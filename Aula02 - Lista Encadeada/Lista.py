@@ -30,3 +30,33 @@ class Lista:
                 aux = aux.prox
         print("------------------------------------------------------")
             
+    def remover(self, valor):
+        if self.inicio is None:
+            print("A lista está vazia")
+        else:
+            removido = False
+            if self.inicio.dado == valor:
+                aux = self.inicio
+                self.inicio = self.inicio.prox
+                del( aux )
+                removido = True
+            else:
+                ant = self.inicio
+                aux = self.inicio.prox
+                while aux :
+                    if aux.dado == valor:
+                        ant.prox = aux.prox
+                        del( aux )
+                        removido = True
+                        break
+                    else: 
+                        ant = aux
+                        aux = aux.prox
+
+            if removido:
+                print( "Item (",valor, ") removido com sucesso!")
+            else: 
+                print( "Item (",valor, ") não encontrado!")
+
+            self.imprimir()
+                    
