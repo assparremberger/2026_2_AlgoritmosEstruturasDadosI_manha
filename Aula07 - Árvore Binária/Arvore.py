@@ -1,4 +1,5 @@
 from No import No
+from Fila import Fila
 
 class Arvore:
 
@@ -42,4 +43,23 @@ class Arvore:
             self.imprimirReverso( raiz.dir )
             print( raiz.dado , end = " - ")
             self.imprimirReverso( raiz.esq )
+
+    def imprimirEmNivel(self, raiz: No):
+        if raiz == None:
+            return
+        fila = Fila()
+        fila.add( raiz )
+
+        while fila.inicio != None:
+            tam = fila.tamanho
+            for _ in range( tam ):
+                atual = fila.remover()
+                print( atual.dado , end = " - ")
+                if atual.esq != None:
+                    fila.add( atual.esq )
+                if atual.dir != None:
+                    fila.add( atual.dir )
+            print("")
+
+
     

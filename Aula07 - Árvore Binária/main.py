@@ -27,8 +27,13 @@ while op != 0:
     elif op == 3:
         arvore.imprimirPreOrdem( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
     elif op == 4:
-            arvore.imprimirPosOrdem( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
+        arvore.imprimirPosOrdem( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
     elif op == 5:
-            arvore.imprimirReverso( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
-    else:
+        arvore.imprimirReverso( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
+    elif op == 6:
+        arvore.imprimirEmNivel( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
+    elif op == 0:
         print("Bye-Bye!!!")
+    else:
+        print("Opção inválida!")
+        
