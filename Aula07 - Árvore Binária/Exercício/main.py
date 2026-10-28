@@ -3,12 +3,12 @@ from Carro import Carro
 
 def menu():
     print( "\n ------------------------------")
-    print( "| 1) Adicionar Carro          |")
+    print( "| 1) Adicionar Carro           |")
     print( "| 2) Imprimir Em Ordem (ERD)   |")
     print( "| 3) Imprimir Pré-Ordem (RED)  |")
     print( "| 4) Imprimir Pós-Ordem (EDR)  |")
     print( "| 5) Imprimir Reverso (DRE)    |")
-#    print( "| 6) Imprimir em Nível         |")
+    print( "| 6) Imprimir em Nível         |")
     print( "| 0) Sair                      |")
     print( " ------------------------------")
     return int( input( "Digite a opção desejada: ") )
@@ -31,8 +31,8 @@ while op != 0:
         arvore.imprimirPosOrdem( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
     elif op == 5:
         arvore.imprimirReverso( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
-#    elif op == 6:
-#        arvore.imprimirEmNivel( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
+    elif op == 6:
+        arvore.imprimirEmNivel( arvore.raiz ) if arvore.raiz else print("Árvore vazia!")
     elif op == 0:
         print("Bye-Bye!!!")
     else:
